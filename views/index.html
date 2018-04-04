@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Test Spam Request</title>
+    </head>
+    <body>
+        <form>
+            <textarea id="response"></textarea>
+            <br />
+            <input type="button" id="test-request" value="Click Me!">
+        </form>
+    </body>
+    <script>
+            $(document).ready(function () {
+                $("#test-request").on('click', function () {
+                    $.ajax({
+                        url: '/redis',
+                        data: { test: 'test' },
+                        type: 'POST',
+                        success: function (result) {
+                            console.log('sukses');
+                            console.log(result);
+                            $("#response").val(JSON.stringify(result));
+                        },
+                        error: function (result) {
+                            window.alert("Failed, check response");
+                            $("#response").val(JSON.stringify(result));
+                        }
+                    });
+                });
+            });
+    </script>
+</html>
+

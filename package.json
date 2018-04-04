@@ -1,0 +1,28 @@
+{
+  "name": "expressredissimulation",
+  "version": "1.0.0",
+  "description": "Basic Redis Usage on Nodejs using Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paskalouis/express-redissimulation.git"
+  },
+  "keywords": [
+    "redis"
+  ],
+  "author": "Paskalouis <recoganjen@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Paskalouis/express-redissimulation/issues"
+  },
+  "homepage": "https://github.com/Paskalouis/express-redissimulation#readme",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "mocha": "^5.0.5",
+    "redis": "^2.8.0"
+  }
+}
